@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="EventiApplication.Mobile.Views.KupiKartuPage">
+
+    <ContentPage.Content>
+        
+        <StackLayout Padding="5" VerticalOptions="StartAndExpand">
+            <StackLayout>
+                <Picker 
+                x:Name="IzborTipaKarte"
+                    ItemsSource="{Binding prodajaTipovi}"
+                    ItemDisplayBinding="{Binding TipKarteNaziv}"
+                    SelectedItem="{Binding ProdajaTip}"></Picker>
+                <Label Text="{Binding LblProdajaTipErr}" TextColor="Red" HorizontalTextAlignment="Center"></Label>
+
+
+                <StackLayout Orientation="Horizontal">
+                    <Entry x:Name="BrKarata" Text="{Binding BrojKarata}" IsReadOnly="True" ></Entry>
+                    <Button Text="+" Command="{Binding UvecajBrKarataCommand}" 
+                            BackgroundColor="Black" TextColor="White"></Button>
+                    <Button Text="-" Command="{Binding SmanjiBrKarataCommand}" 
+                            BackgroundColor="Black" TextColor="White"></Button>
+
+                </StackLayout>
+
+
+                <Button Text="Potvrdi kupovinu" Command="{Binding KupiKartuCommand}"
+                    BackgroundColor="Black" TextColor="White"></Button>
+            </StackLayout>
+
+
+            <Label Text="Karte u ponudi:" FontSize="Medium" FontAttributes="Bold"></Label>
+            <ListView ItemsSource="{Binding ProdajaTipList}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding TipKarteNaziv}" FontSize="Medium" FontAttributes="Bold"></Label>
+                                <Label Text=" - " FontSize="Medium"></Label>
+                                <Label Text="{Binding CijenaTip}" FontSize="Medium" FontAttributes="Bold"></Label>
+                                <Label Text="KM" FontSize="Medium"></Label>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:converters="clr-namespace:EventiApplication.Mobile.Converters"
+             mc:Ignorable="d"
+             x:Class="EventiApplication.Mobile.Views.KartePage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:ImageConverter x:Key="imgConv"></converters:ImageConverter>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Kupljene karte " FontSize="Subtitle" />
+            <ListView ItemsSource="{Binding KarteList}" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="{Binding QrCode, Converter={StaticResource imgConv}}"
+                                       HeightRequest="150"
+                                       WidthRequest="150"></Image>
+                                <StackLayout>
+                                    <Label Text="{Binding TipKarteNaziv}" FontAttributes="Bold"></Label>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="Cijena (KM):"></Label>
+                                        <Label Text="{Binding Cijena}"></Label>
+                                    </StackLayout>
+                                   
+                                    <Label Text="{Binding DatumKupovine}"></Label>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

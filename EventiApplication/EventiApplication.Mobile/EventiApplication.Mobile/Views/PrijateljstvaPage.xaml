@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:ViewModels="clr-namespace:EventiApplication.Mobile.ViewModels"
+             mc:Ignorable="d"
+             x:Class="EventiApplication.Mobile.Views.PrijateljstvaPage">
+    <ContentPage.BindingContext>
+        <ViewModels:PrijateljstvaViewModel></ViewModels:PrijateljstvaViewModel>
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid Padding="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="PoslaniZahtjevi" Text="Poslani zahtjevi" 
+                        BackgroundColor="PaleVioletRed" Grid.Row="0" Grid.Column="0" Clicked="PoslaniZahtjevi_Clicked"></Button>
+                <Button x:Name="DobijeniZahtjevi" Text="Dobijeni zahtjevi" 
+                        BackgroundColor="PaleVioletRed"  Grid.Row="0" Grid.Column="1" Clicked="DobijeniZahtjevi_Clicked"></Button>
+                <Button x:Name="DodajNovePrijatelje" Text="Dodaj nove prijatelje" 
+                        BackgroundColor="PaleVioletRed"  Grid.Row="1" Grid.ColumnSpan="2" Clicked="DodajNovePrijatelje_Clicked" ></Button>
+            </Grid>
+           
+            <Label Text="Prijateljstva" HorizontalTextAlignment="Center" FontAttributes="Bold"></Label>
+            <ListView x:Name="PrijateljstvaList" ItemsSource="{Binding PrijateljstvoList}" HasUnevenRows="True" ItemSelected="PrijateljstvaList_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Padding="5">
+                                <Image Source="{Binding Slika}" 
+                                       IsVisible="{Binding IsVisible}"
+                                       HeightRequest="70"
+                                       WidthRequest="70" 
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="Start"></Image>
+                                <Image Source="{Binding IconSource}" 
+                                       IsVisible="{Binding IconIsVisible }"
+                                       HeightRequest="70"
+                                       WidthRequest="70" 
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="Start"></Image>
+                                <Label Text="{Binding ImePrezime}" VerticalOptions="Center"  HorizontalTextAlignment="Center"></Label>
+                                <ImageButton x:Name="ObrisiPrijateljstvo" WidthRequest="50" HeightRequest="50" Source="trashicon.png"  CommandParameter="{Binding Id}" 
+                                             Clicked="ObrisiPrijateljstvo_Clicked" HorizontalOptions="EndAndExpand"></ImageButton>
+                            
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

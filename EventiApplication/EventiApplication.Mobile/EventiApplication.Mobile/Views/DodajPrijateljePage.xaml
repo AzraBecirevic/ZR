@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewModels="clr-namespace:EventiApplication.Mobile.ViewModels"
+             mc:Ignorable="d"
+             x:Class="EventiApplication.Mobile.Views.DodajPrijateljePage">
+
+    <ContentPage.BindingContext>
+        <viewModels:DodajPrijateljeViewModel></viewModels:DodajPrijateljeViewModel>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout Padding="5">
+            <SearchBar Text="{Binding Pretraga}" ></SearchBar>
+            <Button Text="Trazi" Command="{Binding PretraziCommand}" BackgroundColor="Black" TextColor="White"></Button>
+            <ListView ItemsSource="{Binding KorisniciList}" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="{Binding Slika}" IsVisible="{Binding IsVisibleSlika}" 
+                                       VerticalOptions="Center" HeightRequest="70" WidthRequest="70" BackgroundColor="Blue"></Image>
+                                    <Image Source="{Binding IconSource}" IsVisible="{Binding IsVisibleIcon}"
+                                       HeightRequest="70" WidthRequest="70"></Image>
+                                <Label Text="{Binding Ime}" VerticalOptions="Center" ></Label>
+                                <Label Text="{Binding Prezime}" VerticalOptions="Center"></Label>
+                                <Button x:Name="DodajPrijatelje" Text="Dodaj u prijatelje" 
+                                        BackgroundColor="PaleVioletRed"  
+                                        HorizontalOptions="EndAndExpand" 
+                                        CommandParameter="{Binding Id}" Clicked="DodajPrijatelje_Clicked"></Button>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

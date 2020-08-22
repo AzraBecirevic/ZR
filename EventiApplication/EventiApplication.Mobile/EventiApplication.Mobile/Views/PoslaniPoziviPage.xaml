@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewModels="clr-namespace:EventiApplication.Mobile.ViewModels"
+             mc:Ignorable="d"
+             x:Class="EventiApplication.Mobile.Views.PoslaniPoziviPage">
+    <ContentPage.BindingContext>
+        <viewModels:PoslaniPoziviViewModel></viewModels:PoslaniPoziviViewModel>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout Padding="5">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Button Text="Novi pozivi"  
+                        Command="{Binding NoviPoziviCommand}" 
+                        Grid.Row="0" Grid.Column="0"
+                        BackgroundColor="Black"
+                        TextColor="White"></Button>
+                <Button Text="Stari pozivi" 
+                        Command="{Binding StariPoziviCommand}" 
+                        Grid.Row="0" Grid.Column="1"
+                        BackgroundColor="Black"
+                        TextColor="White"></Button>
+            </Grid>
+           
+            <Label Text="Poslani pozivi" HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="Title"></Label>
+
+            <StackLayout Orientation="Horizontal">
+                <Image Source="requesticon.png" HeightRequest="30" WidthRequest="30" HorizontalOptions="Start">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding NeodgovoreniPoziviCommand}"></TapGestureRecognizer>
+                </Image.GestureRecognizers>
+                </Image>
+                <Image Source="xicon.png" HeightRequest="30" WidthRequest="30" HorizontalOptions="Start">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding OdbijeniPoziviCommand}"></TapGestureRecognizer>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Source="correcticon.jpg" HeightRequest="30" WidthRequest="30" HorizontalOptions="Start">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding PrihvaceniPoziviCommand}"></TapGestureRecognizer>
+                    </Image.GestureRecognizers>
+                </Image>
+            </StackLayout>
+            
+
+            <ListView ItemsSource="{Binding PoziviList}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                
+                                <Label Text="{Binding NazivEventa}" FontAttributes="Bold" VerticalTextAlignment="Center"></Label>
+                                <Label Text="{Binding KorisnikPozvaniImePrezime}" VerticalTextAlignment="Center" HorizontalOptions="Center"></Label>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+                                    <Label  Text="Prihvacen poziv"
+                                            IsVisible="{Binding IsPrihvacen}"
+                                            TextColor="Green"
+                                            VerticalTextAlignment="Center"></Label>
+                                    <Label Text="Odbijen poziv" 
+                                           IsVisible="{Binding IsOdbijen}"
+                                           TextColor="Red"
+                                           VerticalTextAlignment="Center">
+                                    </Label>
+                                    <ImageButton x:Name="ObrisiPoziv"
+                                                 WidthRequest="50" HeightRequest="50" 
+                                                 Source="trashicon.png"  
+                                                 CommandParameter="{Binding Id}"
+                                                 Clicked="ObrisiPoziv_Clicked">
+                                    </ImageButton>
+                                </StackLayout>
+                              
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewModels="clr-namespace:EventiApplication.Mobile.ViewModels"
+             mc:Ignorable="d"
+             x:Class="EventiApplication.Mobile.Views.RatingPage">
+
+    <ContentPage.BindingContext>
+        <viewModels:RatingViewModel></viewModels:RatingViewModel>
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="{Binding Poruka}"></Label>
+            <StackLayout VerticalOptions="Center">
+                <Image x:Name="Z1" Source="{Binding ImgSourceZ1}" WidthRequest="80" HeightRequest="80">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding Z1TappedCommand}"></TapGestureRecognizer>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image x:Name="Z2" Source="{Binding ImgSourceZ2}" WidthRequest="80" HeightRequest="80">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding Z2TappedCommand}"></TapGestureRecognizer>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image x:Name="Z3" Source="{Binding ImgSourceZ3}"  WidthRequest="80" HeightRequest="80">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding Z3TappedCommand}"></TapGestureRecognizer>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image x:Name="Z4" Source="{Binding ImgSourceZ4}"  WidthRequest="80" HeightRequest="80">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding Z4TappedCommand}"></TapGestureRecognizer>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image x:Name="Z5" Source="{Binding ImgSourceZ5}" WidthRequest="80" HeightRequest="80">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding Z5TappedCommand}"></TapGestureRecognizer>
+                    </Image.GestureRecognizers>
+                </Image>
+            </StackLayout>
+          
+            <Button Text="Spasi ocjenu" BackgroundColor="Black" TextColor="White" Command="{Binding SpasiOcjenuCommand}" VerticalOptions="EndAndExpand"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

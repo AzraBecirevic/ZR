@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="EventiApplication.Mobile.Views.PromjenaPodatakaPage">
+    <ContentPage.Content>
+
+        <ScrollView Orientation="Vertical">
+            <StackLayout Padding="5">
+           
+                <Grid VerticalOptions="CenterAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+
+
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+
+                        <RowDefinition Height="Auto"></RowDefinition>
+
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width='Auto'></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Label Text="Ime" VerticalTextAlignment="Center" Grid.Row="0" Grid.Column="0"></Label>
+                    <Entry Text="{Binding Ime}" Grid.Row="0" Grid.Column="1"></Entry>
+                    <Label Text="{Binding LblImeErr}" VerticalTextAlignment="Center"  Grid.Row="1" Grid.ColumnSpan="2" HorizontalTextAlignment="Center" TextColor="Red"></Label>
+
+                    <Label Text="Prezime" VerticalTextAlignment="Center" Grid.Row="2" Grid.Column="0"></Label>
+                    <Entry Text="{Binding Prezime}" Grid.Row="2" Grid.Column="1"></Entry>
+                    <Label Text="{Binding LblPrezimeErr}" VerticalTextAlignment="Center" Grid.Row="3" Grid.ColumnSpan="2" HorizontalTextAlignment="Center" TextColor="Red"></Label>
+
+                    <Label Text="Telefon" VerticalTextAlignment="Center" Grid.Row="4" Grid.Column="0"></Label>
+                    <Entry Text="{Binding Telefon}" Grid.Row="4" Grid.Column="1"></Entry>
+                    <Label Text="{Binding LblTelefonErr}" VerticalTextAlignment="Center" Grid.Row="5" Grid.ColumnSpan="2" HorizontalTextAlignment="Center" TextColor="Red"></Label>
+
+                    <Label Text="Adresa" VerticalTextAlignment="Center" Grid.Row="6" Grid.Column="0"></Label>
+                    <Entry Text="{Binding Adresa}" Grid.Row="6" Grid.Column="1"></Entry>
+                    <Label Text="{Binding LblAdresaErr}" VerticalTextAlignment="Center" Grid.Row="7" Grid.ColumnSpan="2" HorizontalTextAlignment="Center" TextColor="Red"></Label>
+
+                    <Label Text="Postanski broj" VerticalTextAlignment="Center" Grid.Row="8" Grid.Column="0"></Label>
+                    <Entry Text="{Binding PostanskiBroj}" Grid.Row="8" Grid.Column="1"></Entry>
+                    <Label Text="{Binding LblPostBrojErr}" VerticalTextAlignment="Center" Grid.Row="9" Grid.ColumnSpan="2" HorizontalTextAlignment="Center" TextColor="Red"></Label>
+
+
+                    <Label Text="Email" VerticalTextAlignment="Center" Grid.Row="12" Grid.Column="0"></Label>
+                    <Entry Text="{Binding Email}" Grid.Row="12" Grid.Column="1"></Entry>
+                    <Label x:Name="LblEmailErr" Text="{Binding LblEmailErr}" VerticalTextAlignment="Center" Grid.Row="13" Grid.ColumnSpan="2" HorizontalTextAlignment="Center" TextColor="Red"></Label>
+
+
+                    <Label Text="Korisnicko ime" VerticalTextAlignment="Center" Grid.Row="14" Grid.Column="0"></Label>
+                    <Entry Text="{Binding Username}" Grid.Row="14" Grid.Column="1"></Entry>
+                    <Label Text="{Binding LblUsernameErr}" VerticalTextAlignment="Center" Grid.Row="15" Grid.ColumnSpan="2" HorizontalTextAlignment="Center" TextColor="Red"></Label>
+
+                    <Label Text="Grad" VerticalTextAlignment="Center" Grid.Row="16" Grid.Column="0"></Label>
+                    <Picker x:Name="GradoviPicker"  Grid.Row="16" Grid.Column="1"  ItemDisplayBinding="{Binding Naziv}" SelectedItem="{Binding Grad}"></Picker>
+                    <Label Text="{Binding LblGradErr}" VerticalTextAlignment="Center" Grid.Row="17" Grid.ColumnSpan="2" HorizontalTextAlignment="Center" TextColor="Red"></Label>
+
+                </Grid>
+                <Button  Text="Spasi" Command="{Binding SpasiCommand}"  BackgroundColor="Black" TextColor="White"></Button>
+            </StackLayout>
+
+        </ScrollView>
+
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewModels="clr-namespace:EventiApplication.Mobile.ViewModels"
+             mc:Ignorable="d"
+             x:Class="EventiApplication.Mobile.Views.LoginPage"
+             BackgroundColor="Black">
+
+    <ContentPage.BindingContext>
+        <viewModels:LoginViewModel></viewModels:LoginViewModel>
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Content>
+        <StackLayout >
+            <Label Text="Prijava na Event attender" 
+                   FontSize="Medium"
+                   VerticalOptions="StartAndExpand" 
+                   HorizontalOptions="CenterAndExpand" 
+                   TextColor="White"/>
+
+            <StackLayout VerticalOptions="StartAndExpand">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition ></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                </Grid>
+                <Entry Placeholder="Korisnicko ime" 
+                       Text="{Binding Username}" 
+                       Grid.Row="0"
+                       BackgroundColor="Transparent" TextColor="White"></Entry>
+                <Label Text="{Binding LblUsernameErr}" TextColor="White" Grid.Row="1"></Label>
+
+                <Entry Placeholder="Lozinka" 
+                       Text="{Binding Password}" 
+                       IsPassword="True" 
+                       Grid.Row="2"
+                       BackgroundColor="Transparent" TextColor="White"></Entry>
+                <Label Text="{Binding LblPasswordErr}" TextColor="White" Grid.Row="3"></Label>
+
+                <Button Text="Prijava" 
+                        Command="{Binding LoginCommand}" 
+                        Grid.Row="5"
+                        BackgroundColor="Transparent"
+                        TextColor="White"
+                        ></Button>
+                <Button Text="Registracija" 
+                        Clicked="Button_Clicked"  
+                        Grid.Row="6"
+                        BackgroundColor="Transparent"
+                        TextColor="White"
+                       ></Button>
+
+                <Label Text="{Binding Greska}"></Label>
+            </StackLayout>
+            
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

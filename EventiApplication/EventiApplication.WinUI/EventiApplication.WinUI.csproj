@@ -1,0 +1,342 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9364C68F-D78F-4C93-AECB-574F794374D1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>EventiApplication.WinUI</RootNamespace>
+    <AssemblyName>EventiApplication.WinUI</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Flurl, Version=2.8.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Flurl.2.8.2\lib\net40\Flurl.dll</HintPath>
+    </Reference>
+    <Reference Include="Flurl.Http, Version=2.4.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Flurl.Http.2.4.2\lib\net46\Flurl.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.4.7.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Administratori\FrmAdministrator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administratori\FrmAdministrator.Designer.cs">
+      <DependentUpon>FrmAdministrator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administratori\FrmAdministratori.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administratori\FrmAdministratori.Designer.cs">
+      <DependentUpon>FrmAdministratori.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administratori\frmNoviAdministrator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administratori\frmNoviAdministrator.Designer.cs">
+      <DependentUpon>frmNoviAdministrator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="APIService.cs" />
+    <Compile Include="Eventi\frmEventi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Eventi\frmEventi.Designer.cs">
+      <DependentUpon>frmEventi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Eventi\frmNoviEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Eventi\frmNoviEvent.Designer.cs">
+      <DependentUpon>frmNoviEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPocetna.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPocetna.Designer.cs">
+      <DependentUpon>frmPocetna.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Global.cs" />
+    <Compile Include="Helper\Helper.cs" />
+    <Compile Include="Izvjestaji\frmEventIzvjestaj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Izvjestaji\frmEventIzvjestaj.Designer.cs">
+      <DependentUpon>frmEventIzvjestaj.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Izvjestaji\frmKorisniciIzvjestaj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Izvjestaji\frmKorisniciIzvjestaj.Designer.cs">
+      <DependentUpon>frmKorisniciIzvjestaj.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Izvjestaji\frmOrganizatorIzvjestaj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Izvjestaji\frmOrganizatorIzvjestaj.Designer.cs">
+      <DependentUpon>frmOrganizatorIzvjestaj.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Korisnici\frmKorisnici.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Korisnici\frmKorisnici.Designer.cs">
+      <DependentUpon>frmKorisnici.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Korisnici\frmKorisniciDetalji.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Korisnici\frmKorisniciDetalji.Designer.cs">
+      <DependentUpon>frmKorisniciDetalji.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Organizatori\frmNoviOrganizator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Organizatori\frmNoviOrganizator.Designer.cs">
+      <DependentUpon>frmNoviOrganizator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Organizatori\frmOrganizatori.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Organizatori\frmOrganizatori.Designer.cs">
+      <DependentUpon>frmOrganizatori.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProstoriOdrzavanja\frmNoviProstorOdrzavanja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProstoriOdrzavanja\frmNoviProstorOdrzavanja.Designer.cs">
+      <DependentUpon>frmNoviProstorOdrzavanja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProstoriOdrzavanja\frmProstorOdrzavanja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProstoriOdrzavanja\frmProstorOdrzavanja.Designer.cs">
+      <DependentUpon>frmProstorOdrzavanja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="TipKarte\frmNoviTipKarte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TipKarte\frmNoviTipKarte.Designer.cs">
+      <DependentUpon>frmNoviTipKarte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TipKarte\frmTipoviKarte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TipKarte\frmTipoviKarte.Designer.cs">
+      <DependentUpon>frmTipoviKarte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TipoviKarata\frmNoviTipKarte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TipoviKarata\frmNoviTipKarte.Designer.cs">
+      <DependentUpon>frmNoviTipKarte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TipoviKarata\frmTipoviKarata.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TipoviKarata\frmTipoviKarata.Designer.cs">
+      <DependentUpon>frmTipoviKarata.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Administratori\FrmAdministrator.resx">
+      <DependentUpon>FrmAdministrator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administratori\FrmAdministratori.resx">
+      <DependentUpon>FrmAdministratori.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administratori\frmNoviAdministrator.resx">
+      <DependentUpon>frmNoviAdministrator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Eventi\frmEventi.resx">
+      <DependentUpon>frmEventi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Eventi\frmNoviEvent.resx">
+      <DependentUpon>frmNoviEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPocetna.resx">
+      <DependentUpon>frmPocetna.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Izvjestaji\frmEventIzvjestaj.resx">
+      <DependentUpon>frmEventIzvjestaj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Izvjestaji\frmKorisniciIzvjestaj.resx">
+      <DependentUpon>frmKorisniciIzvjestaj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Izvjestaji\frmOrganizatorIzvjestaj.resx">
+      <DependentUpon>frmOrganizatorIzvjestaj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Izvjestaji\rptEvent.rdlc" />
+    <EmbeddedResource Include="Izvjestaji\rptKorisnici.rdlc" />
+    <EmbeddedResource Include="Izvjestaji\rptOrganizator.rdlc" />
+    <EmbeddedResource Include="Korisnici\frmKorisnici.resx">
+      <DependentUpon>frmKorisnici.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Korisnici\frmKorisniciDetalji.resx">
+      <DependentUpon>frmKorisniciDetalji.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Organizatori\frmNoviOrganizator.resx">
+      <DependentUpon>frmNoviOrganizator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Organizatori\frmOrganizatori.resx">
+      <DependentUpon>frmOrganizatori.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ProstoriOdrzavanja\frmNoviProstorOdrzavanja.resx">
+      <DependentUpon>frmNoviProstorOdrzavanja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProstoriOdrzavanja\frmProstorOdrzavanja.resx">
+      <DependentUpon>frmProstorOdrzavanja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TipKarte\frmNoviTipKarte.resx">
+      <DependentUpon>frmNoviTipKarte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TipKarte\frmTipoviKarte.resx">
+      <DependentUpon>frmTipoviKarte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TipoviKarata\frmNoviTipKarte.resx">
+      <DependentUpon>frmNoviTipKarte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TipoviKarata\frmTipoviKarata.resx">
+      <DependentUpon>frmTipoviKarata.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\EventiApplication.Model.Administrator.datasource" />
+    <None Include="Properties\DataSources\EventiApplication.Model.Event.datasource" />
+    <None Include="Properties\DataSources\EventiApplication.Model.EventIzvjestaj.datasource" />
+    <None Include="Properties\DataSources\EventiApplication.Model.Grad.datasource" />
+    <None Include="Properties\DataSources\EventiApplication.Model.Karta.datasource" />
+    <None Include="Properties\DataSources\EventiApplication.Model.Kategorija.datasource" />
+    <None Include="Properties\DataSources\EventiApplication.Model.Korisnik.datasource" />
+    <None Include="Properties\DataSources\EventiApplication.Model.KorisnikPrikaz.datasource" />
+    <None Include="Properties\DataSources\EventiApplication.Model.Kupovina.datasource" />
+    <None Include="Properties\DataSources\EventiApplication.Model.Like.datasource" />
+    <None Include="Properties\DataSources\EventiApplication.Model.ObjectExtension.datasource" />
+    <None Include="Properties\DataSources\EventiApplication.Model.Ocjena.datasource" />
+    <None Include="Properties\DataSources\EventiApplication.Model.Organizator.datasource" />
+    <None Include="Properties\DataSources\EventiApplication.Model.PozivNaEvent.datasource" />
+    <None Include="Properties\DataSources\EventiApplication.Model.Prijateljstvo.datasource" />
+    <None Include="Properties\DataSources\EventiApplication.Model.PrijateljstvoPrikaz.datasource" />
+    <None Include="Properties\DataSources\EventiApplication.Model.ProdajaTip.datasource" />
+    <None Include="Properties\DataSources\EventiApplication.Model.ProstorOdrzavanja.datasource" />
+    <None Include="Properties\DataSources\EventiApplication.Model.Recenzija.datasource" />
+    <None Include="Properties\DataSources\EventiApplication.Model.TipKarte.datasource" />
+    <None Include="Properties\DataSources\EventiApplication.Model.TipProstoraOdrzavanja.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EventiApplication.Model\EventiApplication.Model.csproj">
+      <Project>{E33C2179-207D-4FD4-AE26-8AD629461179}</Project>
+      <Name>EventiApplication.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

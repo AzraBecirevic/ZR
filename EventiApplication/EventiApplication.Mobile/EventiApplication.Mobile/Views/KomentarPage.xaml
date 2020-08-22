@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="EventiApplication.Mobile.Views.KomentarPage">
+    <ContentPage.Content>
+        <StackLayout Padding="3">
+            <Label Text="Vaš komentar: " FontSize="Small"/>
+            <Editor x:Name="KomentarUnos"></Editor>
+            <Label></Label>
+            <Label Text="Ocjena: " FontSize="Small"></Label>
+
+            <Label Text="{Binding Poruka}"></Label>
+            
+            <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                    <Image x:Name="Z1" Source="{Binding ImgSourceZ1}" WidthRequest="70" HeightRequest="70">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding Z1TappedCommand}"></TapGestureRecognizer>
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Image x:Name="Z2" Source="{Binding ImgSourceZ2}" WidthRequest="70" HeightRequest="70">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding Z2TappedCommand}"></TapGestureRecognizer>
+                        </Image.GestureRecognizers>
+                    </Image>
+                   <Image x:Name="Z3" Source="{Binding ImgSourceZ3}"  WidthRequest="70" HeightRequest="70">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding Z3TappedCommand}"></TapGestureRecognizer>
+                        </Image.GestureRecognizers>
+                    </Image>
+                   <Image x:Name="Z4" Source="{Binding ImgSourceZ4}" WidthRequest="70" HeightRequest="70">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding Z4TappedCommand}"></TapGestureRecognizer>
+                        </Image.GestureRecognizers>
+                    </Image>
+                   <Image x:Name="Z5" Source="{Binding ImgSourceZ5}" WidthRequest="70" HeightRequest="70">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding Z5TappedCommand}"></TapGestureRecognizer>
+                        </Image.GestureRecognizers>
+                    </Image>
+                </StackLayout>
+
+            <Button Text="Spasi" BackgroundColor="Black" TextColor="White" Clicked="Button_Clicked"
+                    VerticalOptions="EndAndExpand"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

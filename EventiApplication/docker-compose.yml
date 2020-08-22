@@ -1,0 +1,33 @@
+version: '3'
+services:
+#mssql docker
+  event-sql:
+    image: mcr.microsoft.com/mssql/server:2017-latest-ubuntu
+    restart: unless-stopped
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=QWElkj132!
+      - MSSQL_PID=Developer
+    ports:
+      - 1401:1433
+    networks:
+      - eventnet
+
+  event-api:
+    restart: unless-stopped
+    build:
+      context: .
+    environment:
+      - ConnectionStrings:lokalni=Server=event-sql,1433;Database=170213e;User=sa;Password=QWElkj132!;ConnectRetryCount=0
+    ports:
+      - 65094:7000
+    networks:
+      - eventnet     
+    links:
+      - event-sql
+    depends_on:
+      - event-sql
+      
+networks:
+  eventnet:
+    driver: bridge

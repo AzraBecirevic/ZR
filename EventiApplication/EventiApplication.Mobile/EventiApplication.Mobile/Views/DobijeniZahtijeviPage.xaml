@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewModels="clr-namespace:EventiApplication.Mobile.ViewModels"
+             mc:Ignorable="d"
+             x:Class="EventiApplication.Mobile.Views.DobijeniZahtijevi">
+    <ContentPage.BindingContext>
+        <viewModels:DobijeniZahtijeviViewModel></viewModels:DobijeniZahtijeviViewModel>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Primljeni zahtijevi za prijateljstvo"  HorizontalTextAlignment="Center" FontAttributes="Bold"></Label>
+            <ListView ItemsSource="{Binding DobijeniZahtjevi}" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Padding="5">
+                                <Image Source="{Binding Slika}" 
+                                       IsVisible="{Binding IsVisible}"
+                                       HeightRequest="70"
+                                       WidthRequest="70" 
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="Start"></Image>
+                                <Image Source="{Binding IconSource}" 
+                                       IsVisible="{Binding IconIsVisible }"
+                                       HeightRequest="70"
+                                       WidthRequest="70" 
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="Start"></Image>
+                                <Label Text="{Binding ImePrezime}" VerticalOptions="Center"  HorizontalTextAlignment="Center"></Label>
+                                
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+                                    <Button x:Name="PrihvatiZahtjev" Text="Prihvati" CommandParameter="{Binding Id}" Clicked="PrihvatiZahtjev_Clicked" ></Button>
+
+                                    <ImageButton WidthRequest="50" HeightRequest="50" Source="trashicon.png"  CommandParameter="{Binding Id}" 
+                                             Clicked="Button_Clicked"></ImageButton>
+                                </StackLayout>
+                         
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

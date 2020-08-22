@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:converters="clr-namespace:EventiApplication.Mobile.Converters"
+             mc:Ignorable="d"
+             x:Class="EventiApplication.Mobile.Views.PosjeceniEventiPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:ImageConverter x:Key="imgConv"></converters:ImageConverter>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout Padding="5">
+            <Label Text="Posjećeni eventi" HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="Subtitle"/>
+            <ListView x:Name="PsojeceniEventi" ItemsSource="{Binding KupovinaList}" HasUnevenRows="True" ItemSelected="PsojeceniEventi_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Spacing="2">
+                                <Image Source="{Binding SlikaEventa, Converter={StaticResource imgConv}}"
+                                           HeightRequest="130"
+                                           WidthRequest="130" ></Image>
+                                <StackLayout HorizontalOptions="CenterAndExpand">
+                                    <Label Text="{Binding EventNaziv}" FontAttributes="Bold"></Label>
+                                    <Label Text="{Binding GradEventa}" FontSize="Micro"></Label>
+                                    <Label Text="{Binding DatumEventa}" ></Label>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="Broj kupljenih karata:" ></Label>
+                                        <Label Text="{Binding BrojKupljenihKarata}"></Label>
+                                    </StackLayout>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="Ukupna cijena (KM):"></Label>
+                                        <Label Text="{Binding CijenaSvihKupljenihKarata}" ></Label>
+                                    </StackLayout>
+                                </StackLayout>
+                                <StackLayout HorizontalOptions="EndAndExpand">
+                                    <Button x:Name="KomentarButton"
+                                            Text="Komentar" 
+                                            CommandParameter="{Binding Id}" 
+                                            BackgroundColor="PaleVioletRed" 
+                                            VerticalOptions="CenterAndExpand"
+                                            Clicked="KomentarButton_Clicked"></Button>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

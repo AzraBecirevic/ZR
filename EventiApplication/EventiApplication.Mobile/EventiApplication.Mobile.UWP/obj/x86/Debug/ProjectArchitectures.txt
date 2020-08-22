@@ -1,0 +1,1 @@
+C:\Users\Azra\Desktop\ZR\EventiApplication\EventiApplication.Mobile\EventiApplication.Mobile.UWP\EventiApplication.Mobile.UWP.csproj;x86

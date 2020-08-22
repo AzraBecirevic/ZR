@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewModels="clr-namespace:EventiApplication.Mobile.ViewModels"
+             xmlns:local="clr-namespace:EventiApplication.Mobile.Converters"
+             mc:Ignorable="d"
+             x:Class="EventiApplication.Mobile.Views.EventDetaljiPage">
+    <ContentPage.BindingContext>
+        <viewModels:EventDetaljiViewModel></viewModels:EventDetaljiViewModel>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:ImageConverter x:Key="imgConverter"></local:ImageConverter>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Image Source="{Binding Slika, Converter={StaticResource imgConverter}}"
+               Aspect="AspectFill"
+               HeightRequest="250">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding ImgTappedCommand}">
+
+                        </TapGestureRecognizer>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Image Source="{Binding ImgSource}" WidthRequest="35" HeightRequest="35" Grid.Row="0" Grid.Column="0" HorizontalOptions="Start">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding ImgTappedCommand}"></TapGestureRecognizer>
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Image Source="locationicon.png" WidthRequest="35" HeightRequest="35" Grid.Row="0" Grid.Column="3">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding GetLocationCommand}"></TapGestureRecognizer>
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Image Source="rateicon.png" WidthRequest="35" HeightRequest="35" Grid.Row="0" Grid.Column="4">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Image Source="callfriendsicon.png" WidthRequest="35" HeightRequest="35" Grid.Row="0" Grid.Column="5">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1" ></TapGestureRecognizer>
+                        </Image.GestureRecognizers>
+                    </Image>
+                </Grid>
+                <StackLayout >
+                    <StackLayout>
+                        <Label Text="{Binding Naziv}"></Label>
+                        <Label Text="{Binding DatumVrijeme}"></Label>
+                        <Label Text="{Binding Adresa}"></Label>
+                        <Label Text="Opis: "></Label>
+                        <Label Text="{Binding Opis}"></Label>
+                        <Label Text="{Binding Organizator}"></Label>
+                    </StackLayout>
+                    <StackLayout>
+                        <ImageButton x:Name="KupiKartu"
+                                     Source="kupikartuicon.png" 
+                                     WidthRequest="100" HeightRequest="100" 
+                                     CommandParameter="{Binding Id}"
+                                     Clicked="KupiKartu_Clicked"></ImageButton>
+                    </StackLayout>
+                </StackLayout>
+
+                <StackLayout IsVisible="{Binding Visible}">
+                    <Label Text="Preporuke:"></Label>
+                    <ListView ItemsSource="{Binding PreporuceniEventiList}" HasUnevenRows="True">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout>
+                                        <Image Source="{Binding Slika, Converter={StaticResource imgConverter}}"
+                                               WidthRequest="150"
+                                               HeightRequest="150"></Image>
+                                        <Label Text="{Binding Naziv}" HorizontalTextAlignment="Center"></Label>
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="EventiApplication.Mobile.Views.MojiPodaciPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal" Padding="5">
+                <Image Source="usericon.png" WidthRequest="100" HeightRequest="100" ></Image>
+                <Label Text="{Binding Username}" FontAttributes="Bold" FontSize="Small" 
+                       VerticalTextAlignment="Center" HorizontalTextAlignment="Center"></Label>
+            </StackLayout>
+
+            <StackLayout Padding="5">
+               
+                <Label Text="{Binding Ime}"></Label>
+                <Label Text="{Binding Prezime}"></Label>
+                <Label Text="{Binding Telefon}"></Label>
+                <Label Text="{Binding Email}"></Label>
+            </StackLayout>
+
+            <StackLayout Padding="5">
+                
+                <Label Text="{Binding GradNaziv}"></Label>
+                <Label Text="{Binding Adresa}"></Label>
+                <Label Text="{Binding PostanskiBroj}"></Label>
+            </StackLayout>
+            <Grid Padding="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="PromijeniPodatke"
+                        Text="Promijeni podatke"
+                        BackgroundColor="PaleVioletRed" Grid.Row="0" Grid.Column="0"
+                        Clicked="PromijeniPodatke_Clicked"></Button>
+                <Button x:Name="PromijeniLozinku" Text="Promijeni lozinku" 
+                        BackgroundColor="PaleVioletRed" Grid.Row="0" Grid.Column="1"
+                        Clicked="PromijeniLozinku_Clicked"></Button>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
