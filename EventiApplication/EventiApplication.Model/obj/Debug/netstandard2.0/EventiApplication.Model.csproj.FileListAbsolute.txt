@@ -17,7 +17,6 @@ C:\Users\Azra\Desktop\RS2\EventiApplication\EventiApplication.Model\obj\Debug\ne
 C:\Users\Azra\Desktop\ZR\EventiApplication\EventiApplication.Model\bin\Debug\netstandard2.0\EventiApplication.Model.deps.json
 C:\Users\Azra\Desktop\ZR\EventiApplication\EventiApplication.Model\bin\Debug\netstandard2.0\EventiApplication.Model.dll
 C:\Users\Azra\Desktop\ZR\EventiApplication\EventiApplication.Model\bin\Debug\netstandard2.0\EventiApplication.Model.pdb
-C:\Users\Azra\Desktop\ZR\EventiApplication\EventiApplication.Model\obj\Debug\netstandard2.0\EventiApplication.Model.csprojAssemblyReference.cache
 C:\Users\Azra\Desktop\ZR\EventiApplication\EventiApplication.Model\obj\Debug\netstandard2.0\EventiApplication.Model.AssemblyInfoInputs.cache
 C:\Users\Azra\Desktop\ZR\EventiApplication\EventiApplication.Model\obj\Debug\netstandard2.0\EventiApplication.Model.AssemblyInfo.cs
 C:\Users\Azra\Desktop\ZR\EventiApplication\EventiApplication.Model\obj\Debug\netstandard2.0\EventiApplication.Model.dll

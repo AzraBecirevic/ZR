@@ -26,6 +26,7 @@ namespace EventiApplication.Mobile.Views
                 new HomeMenuItem {Id = MenuItemType.PosjeceniEventi, Title="Posjećeni eventi" },
                 new HomeMenuItem {Id = MenuItemType.MojiPodaci, Title="Moji podaci" },
                 new HomeMenuItem {Id = MenuItemType.GPS, Title="GPS preporuka" },
+                new HomeMenuItem {Id = MenuItemType.Chat, Title="Chat" },
                 new HomeMenuItem {Id = MenuItemType.LogOut, Title="Odjava" }
             };
 

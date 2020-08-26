@@ -34,6 +34,7 @@
                                 <Label Text="{Binding ImePrezime}" VerticalOptions="Center"  HorizontalTextAlignment="Center"></Label>
                                 
                                 <ImageButton WidthRequest="50" HeightRequest="50" Source="trashicon.png"  CommandParameter="{Binding Id}" 
+                                             BackgroundColor="Transparent"
                                              Clicked="Button_Clicked" HorizontalOptions="EndAndExpand"></ImageButton>
                             </StackLayout>
                         </ViewCell>

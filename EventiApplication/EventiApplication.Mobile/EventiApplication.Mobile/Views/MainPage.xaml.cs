@@ -48,6 +48,9 @@ namespace EventiApplication.Mobile.Views
                     case (int)MenuItemType.GPS:
                         MenuPages.Add(id, new NavigationPage((Page)Activator.CreateInstance(typeof(GPSPage))) { BarBackgroundColor = Color.Black });
                         break;
+                    case (int)MenuItemType.Chat:
+                        MenuPages.Add(id, new NavigationPage((Page)Activator.CreateInstance(typeof(ChatPage))) { BarBackgroundColor = Color.Black });
+                        break;
                     case (int)MenuItemType.LogOut:
                         MenuPages.Add(id, new NavigationPage((Page)Activator.CreateInstance(typeof(OdjavaPage))) { BarBackgroundColor = Color.Black });
                         break;

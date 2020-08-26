@@ -75,6 +75,7 @@
                         <ImageButton x:Name="KupiKartu"
                                      Source="kupikartuicon.png" 
                                      WidthRequest="100" HeightRequest="100" 
+                                     BackgroundColor="Transparent"
                                      CommandParameter="{Binding Id}"
                                      Clicked="KupiKartu_Clicked"></ImageButton>
                     </StackLayout>

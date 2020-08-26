@@ -88,6 +88,7 @@ C:\Users\Azra\Desktop\ZR\EventiApplication\EventiApplication.Mobile\EventiApplic
 C:\Users\Azra\Desktop\ZR\EventiApplication\EventiApplication.Mobile\EventiApplication.Mobile\bin\Debug\netstandard2.0\EventiApplication.Model.pdb
 C:\Users\Azra\Desktop\ZR\EventiApplication\EventiApplication.Mobile\EventiApplication.Mobile\obj\Debug\netstandard2.0\EventiApplication.Mobile.csprojAssemblyReference.cache
 C:\Users\Azra\Desktop\ZR\EventiApplication\EventiApplication.Mobile\EventiApplication.Mobile\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\Azra\Desktop\ZR\EventiApplication\EventiApplication.Mobile\EventiApplication.Mobile\obj\Debug\netstandard2.0\Views\ChatPage.xaml.g.cs
 C:\Users\Azra\Desktop\ZR\EventiApplication\EventiApplication.Mobile\EventiApplication.Mobile\obj\Debug\netstandard2.0\Views\DobijeniPoziviPage.xaml.g.cs
 C:\Users\Azra\Desktop\ZR\EventiApplication\EventiApplication.Mobile\EventiApplication.Mobile\obj\Debug\netstandard2.0\Views\DobijeniStariPoziviPage.xaml.g.cs
 C:\Users\Azra\Desktop\ZR\EventiApplication\EventiApplication.Mobile\EventiApplication.Mobile\obj\Debug\netstandard2.0\Views\DobijeniZahtijeviPage.xaml.g.cs
@@ -117,8 +118,8 @@ C:\Users\Azra\Desktop\ZR\EventiApplication\EventiApplication.Mobile\EventiApplic
 C:\Users\Azra\Desktop\ZR\EventiApplication\EventiApplication.Mobile\EventiApplication.Mobile\obj\Debug\netstandard2.0\Views\RegistracijaPage.xaml.g.cs
 C:\Users\Azra\Desktop\ZR\EventiApplication\EventiApplication.Mobile\EventiApplication.Mobile\obj\Debug\netstandard2.0\EventiApplication.Mobile.AssemblyInfoInputs.cache
 C:\Users\Azra\Desktop\ZR\EventiApplication\EventiApplication.Mobile\EventiApplication.Mobile\obj\Debug\netstandard2.0\EventiApplication.Mobile.AssemblyInfo.cs
+C:\Users\Azra\Desktop\ZR\EventiApplication\EventiApplication.Mobile\EventiApplication.Mobile\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\Azra\Desktop\ZR\EventiApplication\EventiApplication.Mobile\EventiApplication.Mobile\obj\Debug\netstandard2.0\EventiApplication.Mobile.csproj.CopyComplete
 C:\Users\Azra\Desktop\ZR\EventiApplication\EventiApplication.Mobile\EventiApplication.Mobile\obj\Debug\netstandard2.0\EventiApplication.Mobile.dll
 C:\Users\Azra\Desktop\ZR\EventiApplication\EventiApplication.Mobile\EventiApplication.Mobile\obj\Debug\netstandard2.0\ref\EventiApplication.Mobile.dll
 C:\Users\Azra\Desktop\ZR\EventiApplication\EventiApplication.Mobile\EventiApplication.Mobile\obj\Debug\netstandard2.0\EventiApplication.Mobile.pdb
-C:\Users\Azra\Desktop\ZR\EventiApplication\EventiApplication.Mobile\EventiApplication.Mobile\obj\Debug\netstandard2.0\XamlC.stamp

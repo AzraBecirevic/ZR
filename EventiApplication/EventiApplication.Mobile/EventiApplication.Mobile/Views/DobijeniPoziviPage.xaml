@@ -86,6 +86,7 @@
                                     
                                     <ImageButton x:Name="ObrisiPoziv"
                                                  WidthRequest="50" HeightRequest="50" 
+                                                 BackgroundColor="Transparent"
                                                  Source="trashicon.png"  
                                                  CommandParameter="{Binding Id}"
                                                  Clicked="ObrisiPoziv_Clicked">

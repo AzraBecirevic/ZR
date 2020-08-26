@@ -12,6 +12,7 @@ namespace EventiApplication.Mobile.Models
         PosjeceniEventi,
         MojiPodaci,
         GPS,
+        Chat,
         LogOut
     }
     public class HomeMenuItem

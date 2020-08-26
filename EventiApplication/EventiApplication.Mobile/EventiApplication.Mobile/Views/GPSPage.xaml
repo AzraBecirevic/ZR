@@ -29,9 +29,10 @@
                                         <Label Text="{Binding VrijemeOdrzavanja}" VerticalTextAlignment="Center"></Label>
                                         <Label Text="{Binding Adresa}" VerticalTextAlignment="Center"></Label>
                                     </StackLayout>
-                                    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                                    <StackLayout HorizontalOptions="EndAndExpand"  VerticalOptions="CenterAndExpand">
                                         <ImageButton CommandParameter="{Binding Id}" Source="locationicon.png"
-                                           Aspect="Fill" HeightRequest="90" WidthRequest="100"
+                                           Aspect="Fill" HeightRequest="80" WidthRequest="100"
+                                              BackgroundColor="Transparent"
                                              Clicked="ImageButton_Clicked"></ImageButton>
                                     </StackLayout>
                                 </StackLayout>
@@ -41,6 +42,8 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
+
+           
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

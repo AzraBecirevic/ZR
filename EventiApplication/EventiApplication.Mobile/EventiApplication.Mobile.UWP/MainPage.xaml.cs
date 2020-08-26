@@ -21,10 +21,9 @@ namespace EventiApplication.Mobile.UWP
         public MainPage()
         {
             this.InitializeComponent();
-            //?
+            
             Platform.MapServiceToken = "Arq_PsOb9JDoBElf2Y4DdC85O7GNHiiHhTXmhr-MU60D3dSoNKMNgfCPuBG0j6Ot";
 
-                // stari kljuc "AvEMT9xnkTY8rfXzR7TD1jaClhYUX9qqfSrRORpATDvhkyv9ltiaXw765QFZPX2U";
             LoadApplication(new EventiApplication.Mobile.App());
            
         }

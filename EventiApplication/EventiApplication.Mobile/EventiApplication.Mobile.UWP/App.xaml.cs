@@ -29,12 +29,7 @@ namespace EventiApplication.Mobile.UWP
         public App()
         {
             this.InitializeComponent();
-            // ?                                          
-            // Arq_PsOb9JDoBElf2Y4DdC85O7GNHiiHhTXmhr - MU60D3dSoNKMNgfCPuBG0j6Ot
-            // stari kljuc Windows.Services.Maps.MapService.ServiceToken = "AvEMT9xnkTY8rfXzR7TD1jaClhYUX9qqfSrRORpATDvhkyv9ltiaXw765QFZPX2U";
-            Windows.Services.Maps.MapService.ServiceToken = "Arq_PsOb9JDoBElf2Y4DdC85O7GNHiiHhTXmhr-MU60D3dSoNKMNgfCPuBG0j6Ot";
-
-
+           
             this.Suspending += OnSuspending;
         }
 

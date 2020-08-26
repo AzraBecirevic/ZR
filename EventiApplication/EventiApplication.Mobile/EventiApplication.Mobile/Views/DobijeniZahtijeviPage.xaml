@@ -34,7 +34,9 @@
                                 <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
                                     <Button x:Name="PrihvatiZahtjev" Text="Prihvati" CommandParameter="{Binding Id}" Clicked="PrihvatiZahtjev_Clicked" ></Button>
 
-                                    <ImageButton WidthRequest="50" HeightRequest="50" Source="trashicon.png"  CommandParameter="{Binding Id}" 
+                                    <ImageButton WidthRequest="50" HeightRequest="50"
+                                                 Source="trashicon.png"  CommandParameter="{Binding Id}" 
+                                                 BackgroundColor="Transparent"
                                              Clicked="Button_Clicked"></ImageButton>
                                 </StackLayout>
                          

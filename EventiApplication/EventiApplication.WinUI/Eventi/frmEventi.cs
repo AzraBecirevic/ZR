@@ -103,7 +103,8 @@ namespace EventiApplication.WinUI.Eventi
             }
             else
             {
-                MessageBox.Show(Properties.Resources.selectRedEventa, "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+               
+               MessageBox.Show(Properties.Resources.selectRedEventa, "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             
         }

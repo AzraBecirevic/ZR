@@ -43,6 +43,10 @@
       "frameworks": {
         "uap10.0.16299": {
           "dependencies": {
+            "Microsoft.AspNetCore.SignalR.Client": {
+              "target": "Package",
+              "version": "[3.1.7, )"
+            },
             "Microsoft.NETCore.UniversalWindowsPlatform": {
               "target": "Package",
               "version": "[6.1.9, )"
@@ -140,6 +144,10 @@
             "Flurl.Http": {
               "target": "Package",
               "version": "[2.4.2, )"
+            },
+            "Microsoft.AspNetCore.SignalR.Client": {
+              "target": "Package",
+              "version": "[3.1.7, )"
             },
             "NETStandard.Library": {
               "suppressParent": "All",

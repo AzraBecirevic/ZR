@@ -20,7 +20,7 @@ namespace EventiApplication.Mobile.Views
             InitializeComponent();
         }
         private readonly APIService _eventiService = new APIService("Event");
-        // public ObservableCollection<Model.Event> Eventi { get; set; } = new ObservableCollection<Model.Event>(); 
+       
         List<Model.Event> Eventi = new List<Model.Event>();
         protected async override void OnAppearing()
         {
@@ -90,14 +90,14 @@ namespace EventiApplication.Mobile.Views
                 }
 
                 lista.ItemsSource = Eventi;
-
+               
             }
             catch(Exception ex)
             {
                 await DisplayAlert("Problem", "Trenutno nije moguce prikazati gps preporuku", "OK");
             }
 
-            //obrnuto iz long-lat adresa
+            //obrnuto
 
             /*  var addrs = (await Geocoding.GetPlacemarksAsync(new Location(location.Latitude, location.Longitude))).FirstOrDefault();
 
@@ -132,19 +132,7 @@ namespace EventiApplication.Mobile.Views
             if (Event != null)
             {
                 var address = Event.Adresa;
-                /* if (Device.RuntimePlatform == Device.UWP)
-                 {
-                     try
-                     {
-                         await Launcher.OpenAsync("bingmaps:?where=" + address);
-                     }
-                     catch
-                     {
-                         await Application.Current.MainPage.DisplayAlert("Info", "Problem sa prikazom lokacije", "OK");
-
-                     }
-                 }
-                 else*/
+               
                 if (Device.RuntimePlatform == Device.Android)
                 {
                     try
@@ -212,14 +200,4 @@ namespace EventiApplication.Mobile.Views
 
 
 //}
-
-
-// uzeti sve evente danasnje i naci njihove lokacije i izracunati razliku
-// base.OnAppearing();
-
-//Geolocator Geolocator = new Geolocator(); 
-//  var access = await Geolocator.RequestAccessAsync();
-
-
-//   GeolocationAccessStatus accessStatus = await Geolocator.RequestAccessAsync();
 
