@@ -52,6 +52,7 @@
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.ckbOtkazan = new System.Windows.Forms.CheckBox();
+            this.btnPreporuka = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -259,11 +260,25 @@
             this.ckbOtkazan.UseVisualStyleBackColor = true;
             this.ckbOtkazan.Visible = false;
             // 
+            // btnPreporuka
+            // 
+            this.btnPreporuka.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnPreporuka.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnPreporuka.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnPreporuka.Location = new System.Drawing.Point(649, 311);
+            this.btnPreporuka.Name = "btnPreporuka";
+            this.btnPreporuka.Size = new System.Drawing.Size(192, 52);
+            this.btnPreporuka.TabIndex = 22;
+            this.btnPreporuka.Text = "Preporuka datuma";
+            this.btnPreporuka.UseVisualStyleBackColor = false;
+            this.btnPreporuka.Click += new System.EventHandler(this.btnPreporuka_Click);
+            // 
             // frmNoviEvent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(951, 541);
+            this.Controls.Add(this.btnPreporuka);
             this.Controls.Add(this.ckbOtkazan);
             this.Controls.Add(this.ckbOdobren);
             this.Controls.Add(this.txtOpis);
@@ -286,6 +301,7 @@
             this.Controls.Add(this.txtNaziv);
             this.Controls.Add(this.label1);
             this.Name = "frmNoviEvent";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Event";
             this.Load += new System.EventHandler(this.frmNoviEvent_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -320,5 +336,6 @@
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.CheckBox ckbOtkazan;
+        private System.Windows.Forms.Button btnPreporuka;
     }
 }

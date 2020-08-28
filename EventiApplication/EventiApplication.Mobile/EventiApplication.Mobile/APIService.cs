@@ -100,24 +100,13 @@ namespace EventiApplication.Mobile
             }
             catch (FlurlHttpException ex)
             {
-                /*  if (ex.Call.HttpStatus == System.Net.HttpStatusCode.Forbidden)
-                      await Application.Current.MainPage.DisplayAlert("Greska", Messages.Forrbiden, "OK");
-
-                  if (ex.Call.HttpStatus == System.Net.HttpStatusCode.InternalServerError)
-                      await Application.Current.MainPage.DisplayAlert("Greska", Messages.IntServerErr, "OK");
-
-                  if (ex.Call.HttpStatus == System.Net.HttpStatusCode.BadRequest)
-                      await Application.Current.MainPage.DisplayAlert("Greska", Messages.BadRqst, "OK");
-                  else
-                      await Application.Current.MainPage.DisplayAlert("Greska", ex.Message, "OK");
-                  // throw;
-                  return default(T);  */
+               
                 var errors = await ex.GetResponseJsonAsync<Dictionary<string, string[]>>();
 
                 var stringBuilder = new StringBuilder();
                 foreach (var error in errors)
                 {
-                    stringBuilder.AppendLine($"{error.Key}, ${string.Join(",", error.Value)}");
+                    stringBuilder.AppendLine($"{error.Key},{string.Join(",", error.Value)}");
                 }
                 await Application.Current.MainPage.DisplayAlert("Greska", stringBuilder.ToString(), "OK");
                 return default(T);
@@ -137,25 +126,13 @@ namespace EventiApplication.Mobile
             }
             catch (FlurlHttpException ex)
             {
-                /* if (ex.Call.HttpStatus == System.Net.HttpStatusCode.Forbidden)
-                     await Application.Current.MainPage.DisplayAlert("Greska", Messages.Forrbiden, "OK");
-
-                 if (ex.Call.HttpStatus == System.Net.HttpStatusCode.InternalServerError)
-                     await Application.Current.MainPage.DisplayAlert("Greska", Messages.IntServerErr, "OK");
-
-                 if (ex.Call.HttpStatus == System.Net.HttpStatusCode.BadRequest)
-                     await Application.Current.MainPage.DisplayAlert("Greska", Messages.BadRqst, "OK");
-                 else
-                     await Application.Current.MainPage.DisplayAlert("Greska", ex.Message, "OK");  //?  zbog userExceptiona
-
-                 return default(T);  */
-
+               
                 var errors = await ex.GetResponseJsonAsync<Dictionary<string, string[]>>();
 
                 var stringBuilder = new StringBuilder();
                 foreach (var error in errors)
                 {
-                    stringBuilder.AppendLine($"{error.Key}, ${string.Join(",", error.Value)}");
+                    stringBuilder.AppendLine($"{error.Key}, {string.Join(",", error.Value)}");
                 }
                 await Application.Current.MainPage.DisplayAlert("Greska", stringBuilder.ToString(), "OK");
                 return default(T);

@@ -23,6 +23,8 @@ namespace EventiApplication.WinUI.Eventi
         private readonly APIService _kategorijeService = new APIService("Kategorija");
         private readonly APIService _prostoriOdrzavanjaService = new APIService("ProstorOdrzavanja");
         private readonly APIService _organizatoriService = new APIService("Organizator");
+        private readonly APIService _datumPService = new APIService("DatumP");
+
 
 
         EventInsertRequest request = new EventInsertRequest();
@@ -343,6 +345,52 @@ namespace EventiApplication.WinUI.Eventi
             cmbKategorije.DataSource = kategorije;
             cmbKategorije.DisplayMember = "Naziv";
             cmbKategorije.ValueMember = "Id";
+        }
+
+        private async void btnPreporuka_Click(object sender, EventArgs e)
+        {
+            // razlika oko slike prilikom izmjene ili dodavanja novog evenyta  provjeriti
+            // validacija zbog vremena i svih podataka
+            if (this.ValidateChildren())
+            {
+                var niz = txtVrijeme.Text.Split(':');
+                int sati = int.Parse(niz[0]);
+                int minute = int.Parse(niz[1]);
+
+                Model.Request.DatumPSearchRequest request = new DatumPSearchRequest
+                {
+                    IzabraniDatum = dtpDatumOdrzavanja.Value,
+                    KategorijaId = (cmbKategorije.SelectedItem as Kategorija).Id,
+                    ProstorOdrzavanjaId = (cmbProstorOdrzavanja.SelectedItem as ProstorOdrzavanja).Id,
+                    VrijemeEventa = new TimeSpan(sati, minute, 0)
+                };
+
+               
+
+                var preporuke = await _datumPService.Get<List<Model.DatumP>>(request);
+                DatumP preporuka = preporuke?[0];
+                if (preporuka != null)
+                {
+                    if (!string.IsNullOrEmpty(preporuka.Poruka))
+                    {
+                        if (preporuka.IzabranJePreporucen)
+                        {
+                            MessageBox.Show(preporuka.Poruka, "Preporuka datuma", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            DialogResult drs = MessageBox.Show(preporuka.Poruka, "Preporuka datuma", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                            if (drs == DialogResult.Yes)
+                            {
+                                dtpDatumOdrzavanja.Value = preporuka.PreporuceniDatum;
+                            }
+                        }
+
+                    }
+                }
+              
+                    
+            }
         }
     }
 }

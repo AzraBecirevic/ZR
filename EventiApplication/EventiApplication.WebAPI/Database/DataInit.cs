@@ -25,16 +25,42 @@ namespace EventiApplication.WebAPI.Database
                         {
                             e.Slika = Helper.ImageHelper.ReadFile("./Images/koncert.jpg");
                             e.SlikaThumb = Helper.ImageHelper.ReadFile("./Images/koncert.jpg");
+
+                            /*  var niz = e.VrijemeOdrzavanja.Split(":");
+                              int sati = int.Parse(niz[0]);
+                              int minute = int.Parse(niz[1]);
+
+                              DateTime dt = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, sati, minute, 0);
+                              e.DatumOdrzavanja = dt;*/
+                            DateTime dt = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, 20, 00, 0);
+                            e.DatumOdrzavanja = dt;
+                            e.VrijemeOdrzavanja = "20:00";
                         }
                         else if (e.Kategorija.Naziv == "Kultura")
                         {
                             e.Slika = Helper.ImageHelper.ReadFile("./Images/opera.jpg");
                             e.SlikaThumb = Helper.ImageHelper.ReadFile("./Images/opera.jpg");
+
+                            /* var niz = e.VrijemeOdrzavanja.Split(":");
+                             int sati = int.Parse(niz[0]);
+                             int minute = int.Parse(niz[1]);
+
+                             DateTime dt = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, sati, minute, 0);
+                             e.DatumOdrzavanja = dt;*/
+                            
+                            DateTime dt = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, 20, 00, 0);
+                            e.DatumOdrzavanja = dt;
+                            e.VrijemeOdrzavanja = "20:00";
                         }
                         else
                         {
                             e.Slika = Helper.ImageHelper.ReadFile("./Images/fudbal.jpg");
                             e.SlikaThumb = Helper.ImageHelper.ReadFile("./Images/fudbal.jpg");
+
+                            DateTime datum = e.DatumOdrzavanja.AddDays(30);
+                            DateTime dt = new DateTime(datum.Year, datum.Month, datum.Year, 20, 00, 0);
+                            e.DatumOdrzavanja = dt;
+                            e.VrijemeOdrzavanja = "20:00";
                         }
 
                         _ctx.SaveChanges();

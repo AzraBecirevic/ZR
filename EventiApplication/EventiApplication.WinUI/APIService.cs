@@ -87,25 +87,13 @@ namespace EventiApplication.WinUI
             }
             catch (FlurlHttpException ex)
             {
-                /* if (ex.Call.HttpStatus == System.Net.HttpStatusCode.Forbidden)
-                     MessageBox.Show(Properties.Resources.Forrbiden, "Greska", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                 if (ex.Call.HttpStatus == System.Net.HttpStatusCode.InternalServerError)
-                     MessageBox.Show(Properties.Resources.IntServerErr, "Greska", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                 if (ex.Call.HttpStatus == System.Net.HttpStatusCode.BadRequest)
-                     MessageBox.Show(Properties.Resources.BadRqst, "Greska", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                 else
-                     MessageBox.Show(ex.Message);
-                // throw;
-                 return default(T);   */
-
+               
                 var errors = await ex.GetResponseJsonAsync<Dictionary<string, string[]>>();
 
                 var stringBuilder = new StringBuilder();
                 foreach (var error in errors)
-                {
-                    stringBuilder.AppendLine($"{error.Key}, ${string.Join(",", error.Value)}");
+                {                                         
+                    stringBuilder.AppendLine($"{error.Key}, {string.Join(",", error.Value)}");
                 }
                 MessageBox.Show(stringBuilder.ToString(), "Greska", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return default(T);
@@ -123,28 +111,13 @@ namespace EventiApplication.WinUI
                 return result;
             }
             catch (FlurlHttpException ex)
-            {  /*
-                if (ex.Call.HttpStatus == System.Net.HttpStatusCode.Forbidden)
-                    MessageBox.Show(Properties.Resources.Forrbiden, "Greska", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                if (ex.Call.HttpStatus == System.Net.HttpStatusCode.InternalServerError)
-                    MessageBox.Show(Properties.Resources.IntServerErr, "Greska", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                if (ex.Call.HttpStatus == System.Net.HttpStatusCode.BadRequest)
-                    MessageBox.Show(Properties.Resources.BadRqst, "Greska", MessageBoxButtons.OK, MessageBoxIcon.Error);
-              //  else
-                //    MessageBox.Show(ex.Message);  //?  zbog userExceptiona
-                                                  // ili sa stringBulider;
-
-               //  return default(T);  //?
-
-               */
+            { 
                 var errors = await ex.GetResponseJsonAsync<Dictionary<string, string[]>>();
 
                 var stringBuilder = new StringBuilder();
                 foreach (var error in errors)
                 {
-                    stringBuilder.AppendLine($"{error.Key}, ${string.Join(",", error.Value)}");
+                    stringBuilder.AppendLine($"{error.Key}, {string.Join(",", error.Value)}");
                 }
                 MessageBox.Show(stringBuilder.ToString(), "Greska", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return default(T);  

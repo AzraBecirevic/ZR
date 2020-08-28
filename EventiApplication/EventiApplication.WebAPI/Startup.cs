@@ -119,7 +119,9 @@ namespace EventiApplication.WebAPI
             services.AddScoped<ICRUDService<Model.Recenzija, RecenzijaSearchRequest, RecenzijaInsertRequest, RecenzijaInsertRequest, object>, RecenzijaService>();
 
             services.AddScoped<IService<Model.Karta, KartaSearchRequest>, KartaService>();
-        } 
+            services.AddScoped<IService<Model.DatumP, DatumPSearchRequest>, DatumPService>();
+
+        }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

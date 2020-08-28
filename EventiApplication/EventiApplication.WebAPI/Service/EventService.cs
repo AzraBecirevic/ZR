@@ -57,10 +57,9 @@ namespace EventiApplication.WebAPI.Service
                 }
                 if (search.IsGps)
                 {
-                    //?
+                    
                     query = query.Where(e=>e.DatumOdrzavanja.Date.CompareTo(search.TrenutniDatum.Date)==0);
-                    // e => e.DatumOdrzavanja.CompareTo(search.TrenutniDatum) == 0
-                    //? ili dan-dan, mjesec-mjesec zbog timespana
+                    
                     query = query.Where(e => e.DatumOdrzavanja.TimeOfDay > search.TrenutnoVrijeme);
                 }
                 var list = query.Select(e => new Model.Event
@@ -225,14 +224,56 @@ namespace EventiApplication.WebAPI.Service
 
         //...........................
 
-       /* public override Model.Event Insert(EventInsertRequest request)
+        public override Model.Event Insert(EventInsertRequest request)
         {
+            
             var niz = request.VrijemeOdrzavanja.Split(":");
             DateTime datum = request.DatumOdrzavanja;
             int sati = int.Parse(niz[0]);
             int minute = int.Parse(niz[1]);
             request.DatumOdrzavanja = new DateTime(datum.Year, datum.Month, datum.Day, sati, minute, 0);
+
+
+            // provjera da li postoji event u isto vrijeme na istom mjestu, u isto sati
+            if (_ctx.Event.Where(e => e.ProstorOdrzavanjaId == request.ProstorOdrzavanjaId).
+                Where(e => e.DatumOdrzavanja.CompareTo(request.DatumOdrzavanja) == 0).Any())
+            {
+                throw new UserException("Na izabranom prostoru odrzavanja, na isti datum, u istoj satnici postoji zakazan event.");
+            }
+
+            var organizovani = _ctx.Event.Where(e => e.ProstorOdrzavanjaId == request.ProstorOdrzavanjaId)
+                        .Where(e => e.DatumOdrzavanja.Date.CompareTo(request.DatumOdrzavanja.Date) == 0).ToList();
+
+            bool PostojiEventURazmakuOd5Sati = false;
+
+            foreach (var o in organizovani)
+            {
+                if (Math.Abs((o.DatumOdrzavanja - request.DatumOdrzavanja).TotalHours) < 5)
+                    PostojiEventURazmakuOd5Sati = true;
+
+            }
+            if (PostojiEventURazmakuOd5Sati)
+            {
+                throw new UserException("Na izabranom prostoru odrzavanja, na isti datum, postoji/e organizavan/i event/i u razmaku od 5 sati od ovog eventa. Pokusajte promijeniti datum ili satnicu.");
+            }
+
             return base.Insert(request);
-        }*/
+        }
+
+        public override Model.Event Update(int id, EventInsertRequest request)
+        {
+            var Event = _ctx.Event.Find(id);
+            //ako je datum promijenjen 
+            if(Event!=null && Event.DatumOdrzavanja.CompareTo(request.DatumOdrzavanja) != 0)
+            {
+                var niz = request.VrijemeOdrzavanja.Split(":");
+                DateTime datum = request.DatumOdrzavanja;
+                int sati = int.Parse(niz[0]);
+                int minute = int.Parse(niz[1]);
+                request.DatumOdrzavanja = new DateTime(datum.Year, datum.Month, datum.Day, sati, minute, 0);
+            }
+          
+            return base.Update(id, request);
+        }
     }
 }
