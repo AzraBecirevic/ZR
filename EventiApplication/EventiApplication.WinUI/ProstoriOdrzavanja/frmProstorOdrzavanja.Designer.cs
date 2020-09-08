@@ -210,6 +210,7 @@
             this.Controls.Add(this.btnIzbrisi);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmProstorOdrzavanja";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Prostori održavanja";
             this.Load += new System.EventHandler(this.frmProstorOdrzavanja_Load);
             this.groupBox1.ResumeLayout(false);

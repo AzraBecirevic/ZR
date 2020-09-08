@@ -14,8 +14,8 @@
     </ContentPage.Resources>
     <ContentPage.Content>
         <StackLayout>
-        
 
+            <Label x:Name="Poruka" IsVisible="False"></Label>
             <ListView x:Name="lista" HasUnevenRows="True">
                 <ListView.ItemTemplate>
                     <DataTemplate>

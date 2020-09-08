@@ -55,7 +55,7 @@ namespace EventiApplication.WinUI.Korisnici
                 {
                     MemoryStream stream = new MemoryStream(korisnik.Slika);
                     Image img = Image.FromStream(stream);   //parametr is not valid
-                    pictureBox.Image = img;
+                   // pictureBox.Image = img;
                 }
                
             }

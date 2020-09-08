@@ -150,6 +150,7 @@
             this.Controls.Add(this.txtNaziv);
             this.Controls.Add(this.btnSnimi);
             this.Name = "frmNoviOrganizator";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Organizator";
             this.Load += new System.EventHandler(this.frmNoviOrganizator_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();

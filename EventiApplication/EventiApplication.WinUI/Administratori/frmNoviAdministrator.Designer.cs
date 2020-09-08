@@ -228,6 +228,7 @@
             this.Controls.Add(this.txtIme);
             this.Controls.Add(this.label1);
             this.Name = "frmNoviAdministrator";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Novi Administrator";
             this.Load += new System.EventHandler(this.frmNoviAdministrator_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();

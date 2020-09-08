@@ -21,7 +21,7 @@ namespace EventiApplication.Mobile
         //uwp
        private string _apiUrl = "http://127.0.0.1:65094/api";     // "http://localhost:65094/api"; 
        //android
-      // private string _apiUrl = "http://10.0.2.2:65094/api";  
+    //   private string _apiUrl = "http://10.0.2.2:65094/api";  
 
 #endif
 #if RELEASE

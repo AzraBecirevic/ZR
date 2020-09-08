@@ -88,8 +88,13 @@ namespace EventiApplication.Mobile.Views
                         }
                     }
                 }
-
-                lista.ItemsSource = Eventi;
+                if(eventi==null || eventi.Count == 0)
+                {
+                    Poruka.Text = "Trenutno nema najavljenih evenata u vasoj blizini";
+                    Poruka.IsVisible = true;
+                }
+                else    
+                    lista.ItemsSource = Eventi;
                
             }
             catch(Exception ex)

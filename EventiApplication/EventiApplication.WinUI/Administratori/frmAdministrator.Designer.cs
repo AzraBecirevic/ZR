@@ -205,7 +205,7 @@
             this.label8.TabIndex = 11;
             this.label8.Text = "Username";
             // 
-            // frmAdministrator
+            // FrmAdministrator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -227,7 +227,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtIme);
             this.Controls.Add(this.label1);
-            this.Name = "frmAdministrator";
+            this.Name = "FrmAdministrator";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Administrator";
             this.Load += new System.EventHandler(this.frmAdministrator_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();

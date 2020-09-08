@@ -45,9 +45,7 @@
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.ckbIsAktivan = new System.Windows.Forms.CheckBox();
-            this.pictureBox = new System.Windows.Forms.PictureBox();
             this.btnPromijeniAktivnost = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -190,28 +188,19 @@
             // 
             this.ckbIsAktivan.AutoSize = true;
             this.ckbIsAktivan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ckbIsAktivan.Location = new System.Drawing.Point(517, 299);
+            this.ckbIsAktivan.Location = new System.Drawing.Point(179, 417);
             this.ckbIsAktivan.Name = "ckbIsAktivan";
             this.ckbIsAktivan.Size = new System.Drawing.Size(102, 26);
             this.ckbIsAktivan.TabIndex = 16;
             this.ckbIsAktivan.Text = "Aktivan";
             this.ckbIsAktivan.UseVisualStyleBackColor = true;
             // 
-            // pictureBox
-            // 
-            this.pictureBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox.Location = new System.Drawing.Point(517, 24);
-            this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(280, 252);
-            this.pictureBox.TabIndex = 17;
-            this.pictureBox.TabStop = false;
-            // 
             // btnPromijeniAktivnost
             // 
             this.btnPromijeniAktivnost.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.btnPromijeniAktivnost.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnPromijeniAktivnost.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnPromijeniAktivnost.Location = new System.Drawing.Point(517, 346);
+            this.btnPromijeniAktivnost.Location = new System.Drawing.Point(90, 469);
             this.btnPromijeniAktivnost.Name = "btnPromijeniAktivnost";
             this.btnPromijeniAktivnost.Size = new System.Drawing.Size(280, 34);
             this.btnPromijeniAktivnost.TabIndex = 18;
@@ -223,9 +212,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(840, 415);
+            this.ClientSize = new System.Drawing.Size(484, 541);
             this.Controls.Add(this.btnPromijeniAktivnost);
-            this.Controls.Add(this.pictureBox);
             this.Controls.Add(this.ckbIsAktivan);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.label8);
@@ -244,9 +232,9 @@
             this.Controls.Add(this.txtIme);
             this.Controls.Add(this.label1);
             this.Name = "frmKorisniciDetalji";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Korisnik";
             this.Load += new System.EventHandler(this.frmKorisniciDetalji_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -271,7 +259,6 @@
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.CheckBox ckbIsAktivan;
-        private System.Windows.Forms.PictureBox pictureBox;
         private System.Windows.Forms.Button btnPromijeniAktivnost;
     }
 }

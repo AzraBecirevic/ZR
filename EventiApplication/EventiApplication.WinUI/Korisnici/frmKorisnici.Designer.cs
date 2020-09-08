@@ -276,6 +276,7 @@
             this.Controls.Add(this.txtIme);
             this.Controls.Add(this.btnTrazi);
             this.Name = "frmKorisnici";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Korisnici";
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvKorisnici)).EndInit();

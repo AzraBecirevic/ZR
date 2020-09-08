@@ -71,6 +71,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtNaziv);
             this.Name = "frmNoviTipKarte";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmNoviTipKarte";
             this.ResumeLayout(false);
             this.PerformLayout();

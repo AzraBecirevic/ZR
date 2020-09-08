@@ -118,6 +118,7 @@
             this.Controls.Add(this.btnIzbrisi);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmTipoviKarata";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmTipoviKarata";
             this.Load += new System.EventHandler(this.frmTipoviKarata_Load);
             this.groupBox1.ResumeLayout(false);

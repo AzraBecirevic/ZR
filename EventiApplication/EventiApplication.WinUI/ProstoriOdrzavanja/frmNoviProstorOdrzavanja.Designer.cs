@@ -145,6 +145,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSacuvaj);
             this.Name = "frmNoviProstorOdrzavanja";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Prostor održavanja";
             this.Load += new System.EventHandler(this.frmNoviProstorOdrzavanja_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
