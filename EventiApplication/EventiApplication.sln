@@ -15,8 +15,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventiApplication.Mobile.UW
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventiApplication.Mobile.Android", "EventiApplication.Mobile\EventiApplication.Mobile.Android\EventiApplication.Mobile.Android.csproj", "{4609B114-3FDA-40B5-BEAD-3FE83B29CA21}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventiApplication.Mobile.iOS", "EventiApplication.Mobile\EventiApplication.Mobile.iOS\EventiApplication.Mobile.iOS.csproj", "{F3C511AF-1A21-4520-B47D-0010BCC74EE4}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventiApplication.Mobile", "EventiApplication.Mobile\EventiApplication.Mobile\EventiApplication.Mobile.csproj", "{219AF7E7-9D6F-4E55-9F53-BBBB119EA824}"
 EndProject
 Global
@@ -167,22 +165,6 @@ Global
 		{4609B114-3FDA-40B5-BEAD-3FE83B29CA21}.Release|x86.ActiveCfg = Release|Any CPU
 		{4609B114-3FDA-40B5-BEAD-3FE83B29CA21}.Release|x86.Build.0 = Release|Any CPU
 		{4609B114-3FDA-40B5-BEAD-3FE83B29CA21}.Release|x86.Deploy.0 = Release|Any CPU
-		{F3C511AF-1A21-4520-B47D-0010BCC74EE4}.Debug|Any CPU.ActiveCfg = Debug|iPhone
-		{F3C511AF-1A21-4520-B47D-0010BCC74EE4}.Debug|ARM.ActiveCfg = Debug|iPhone
-		{F3C511AF-1A21-4520-B47D-0010BCC74EE4}.Debug|iPhone.ActiveCfg = Debug|iPhone
-		{F3C511AF-1A21-4520-B47D-0010BCC74EE4}.Debug|iPhone.Build.0 = Debug|iPhone
-		{F3C511AF-1A21-4520-B47D-0010BCC74EE4}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
-		{F3C511AF-1A21-4520-B47D-0010BCC74EE4}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
-		{F3C511AF-1A21-4520-B47D-0010BCC74EE4}.Debug|x64.ActiveCfg = Debug|iPhone
-		{F3C511AF-1A21-4520-B47D-0010BCC74EE4}.Debug|x86.ActiveCfg = Debug|iPhone
-		{F3C511AF-1A21-4520-B47D-0010BCC74EE4}.Release|Any CPU.ActiveCfg = Release|iPhone
-		{F3C511AF-1A21-4520-B47D-0010BCC74EE4}.Release|ARM.ActiveCfg = Release|iPhone
-		{F3C511AF-1A21-4520-B47D-0010BCC74EE4}.Release|iPhone.ActiveCfg = Release|iPhone
-		{F3C511AF-1A21-4520-B47D-0010BCC74EE4}.Release|iPhone.Build.0 = Release|iPhone
-		{F3C511AF-1A21-4520-B47D-0010BCC74EE4}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
-		{F3C511AF-1A21-4520-B47D-0010BCC74EE4}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
-		{F3C511AF-1A21-4520-B47D-0010BCC74EE4}.Release|x64.ActiveCfg = Release|iPhone
-		{F3C511AF-1A21-4520-B47D-0010BCC74EE4}.Release|x86.ActiveCfg = Release|iPhone
 		{219AF7E7-9D6F-4E55-9F53-BBBB119EA824}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{219AF7E7-9D6F-4E55-9F53-BBBB119EA824}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{219AF7E7-9D6F-4E55-9F53-BBBB119EA824}.Debug|ARM.ActiveCfg = Debug|Any CPU
@@ -214,7 +196,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{429F3859-CCB1-4A57-A7B1-849FF67022D3} = {D14D016A-63A1-4931-B42A-E35161267829}
 		{4609B114-3FDA-40B5-BEAD-3FE83B29CA21} = {D14D016A-63A1-4931-B42A-E35161267829}
-		{F3C511AF-1A21-4520-B47D-0010BCC74EE4} = {D14D016A-63A1-4931-B42A-E35161267829}
 		{219AF7E7-9D6F-4E55-9F53-BBBB119EA824} = {D14D016A-63A1-4931-B42A-E35161267829}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
