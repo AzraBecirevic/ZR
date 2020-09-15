@@ -212,6 +212,40 @@ namespace EventiApplication.WebAPI.Service
 
         }
 
-       
+        public void PosaljiMail(int korisnikId, float cijena, int eventId)
+        {
+            Database.Korisnik korisnik = _ctx.Korisnik.Find(korisnikId);
+
+            Database.Event Event = _ctx.Event.Find(eventId);
+
+            if (korisnik == null || Event == null)
+                return;
+
+            var message = new MimeMessage();
+
+            message.From.Add(new MailboxAddress("Event Atteder", "event.attender@gmail.com"));
+
+            message.To.Add(new MailboxAddress(korisnik.Ime, korisnik.Email));
+
+
+            message.Subject = "Uspješna kupovina karte";
+
+            message.Body = new TextPart("plain")
+            {
+                Text = "Poštovani/a " + korisnik.Ime + " " + korisnik.Prezime + " uspješno ste obavili kupovinu " +
+                "karte/karata za event " + Event.Naziv + ", " + "u iznosu od " + cijena + " KM. Hvala na povjerenju! "
+            };
+
+            using (var client = new SmtpClient())
+            {
+                client.Connect("smtp.gmail.com", 587, false);
+
+                client.Authenticate("event.attender@gmail.com", "eventat1234");
+
+                client.Send(message);
+                client.Disconnect(true);
+            }
+        }
+
     }
 }

@@ -99,7 +99,7 @@ namespace EventiApplication.Mobile.Views
             }
             catch(Exception ex)
             {
-                await DisplayAlert("Problem", "Trenutno nije moguce prikazati gps preporuku", "OK");
+                await DisplayAlert("Poruka", "Trenutno nije moguce prikazati gps preporuku", "OK");
             }
 
             //obrnuto

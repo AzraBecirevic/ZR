@@ -58,7 +58,7 @@ namespace EventiApplication.WebAPI.Database
                             e.SlikaThumb = Helper.ImageHelper.ReadFile("./Images/fudbal.jpg");
 
                             DateTime datum = e.DatumOdrzavanja.AddDays(30);
-                            DateTime dt = new DateTime(datum.Year, datum.Month, datum.Year, 20, 00, 0);
+                            DateTime dt = new DateTime(datum.Year, datum.Month, datum.Day, 20, 00, 0);
                             e.DatumOdrzavanja = dt;
                             e.VrijemeOdrzavanja = "20:00";
                         }
