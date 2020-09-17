@@ -31,7 +31,7 @@
             FontSize="20"
             HorizontalOptions="End"
             HorizontalTextAlignment="Start"
-            Text="Close"
+            Text="Zatvori"
             TextColor="White">
             <Label.GestureRecognizers>
                 <TapGestureRecognizer Command="{Binding DisconnectCommand}" />
@@ -151,7 +151,7 @@
                 BackgroundColor="#2ac2c5"
                 Command="{Binding SendMessageCommand}"
                 HorizontalOptions="FillAndExpand"
-                Text="Send"
+                Text="Pošalji"
                 VerticalOptions="FillAndExpand" />
         </Grid>
         <Grid
@@ -165,12 +165,12 @@
                 VerticalOptions="Center">
                 <Label
                     HorizontalOptions="Center"
-                    Text="Your chat name:"
+                    Text="Vaše chat ime:"
                     TextColor="Black"
                     VerticalOptions="Center" />
                 <Entry
                     BackgroundColor="#f5f9fa"
-                    Placeholder="Name"
+                    Placeholder="Ime"
                     PlaceholderColor="#969daf"
                     Text="{Binding Name}"
                     WidthRequest="150" />
@@ -179,7 +179,7 @@
                     BackgroundColor="#2ac2c5"
                     Command="{Binding ConnectCommand}"
                     HorizontalOptions="FillAndExpand"
-                    Text="Connect"
+                    Text="Konektuj se"
                     VerticalOptions="FillAndExpand" />
             </StackLayout>
         </Grid>

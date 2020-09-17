@@ -15,7 +15,7 @@
     <ContentPage.Content>
         <StackLayout>
 
-            <Label x:Name="Poruka" IsVisible="False"></Label>
+            <Label x:Name="Poruka" IsVisible="False" HorizontalTextAlignment="Center"></Label>
             <ListView x:Name="lista" HasUnevenRows="True">
                 <ListView.ItemTemplate>
                     <DataTemplate>
@@ -27,7 +27,7 @@
                                     <StackLayout Orientation="Vertical">
                                         <Label Text="{Binding Naziv}" VerticalTextAlignment="Center"></Label>
                                         <Label Text="{Binding VrijemeOdrzavanja}" VerticalTextAlignment="Center"></Label>
-                                        <Label Text="{Binding Adresa}" VerticalTextAlignment="Center"></Label>
+                                        <Label Text="{Binding  ProstorOdrzavanjaGradAdresa}" VerticalTextAlignment="Center"></Label>
                                     </StackLayout>
                                     <StackLayout HorizontalOptions="EndAndExpand"  VerticalOptions="CenterAndExpand">
                                         <ImageButton CommandParameter="{Binding Id}" Source="locationicon.png"

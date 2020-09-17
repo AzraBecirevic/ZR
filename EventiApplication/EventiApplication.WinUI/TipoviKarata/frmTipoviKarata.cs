@@ -44,7 +44,7 @@ namespace EventiApplication.WinUI.TipoviKarata
                 }
                 else
                 {
-                    MessageBox.Show(Properties.Resources.nemBrisanjeTipaKarte);
+                    MessageBox.Show(Properties.Resources.nemBrisanjeTipaKarte, "Poruka", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
 
                 BindTipoveKarata();

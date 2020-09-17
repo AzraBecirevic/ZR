@@ -243,12 +243,14 @@ namespace EventiApplication.WinUI.Eventi
             {
                 BindingEvent();
                 ckbOtkazan.Visible = true;
+                btnPreporuka.Visible = false;
             }
             else
             {
                 BindKategorije();
                 BindProstoriOdrzavanja();
                 BindOrganizatori();
+                btnPreporuka.Visible = true;
             }
 
         }

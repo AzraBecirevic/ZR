@@ -30,11 +30,6 @@
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvOrganizatori = new System.Windows.Forms.DataGridView();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Naziv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Telefon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Grad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtPretraga = new System.Windows.Forms.TextBox();
             this.btnTrazi = new System.Windows.Forms.Button();
             this.btnIzmijeni = new System.Windows.Forms.Button();
@@ -44,6 +39,10 @@
             this.btnNext = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Naziv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Telefon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrganizatori)).BeginInit();
             this.SuspendLayout();
@@ -67,8 +66,7 @@
             this.Id,
             this.Naziv,
             this.Telefon,
-            this.Email,
-            this.Grad});
+            this.Email});
             this.dgvOrganizatori.Location = new System.Drawing.Point(11, 25);
             this.dgvOrganizatori.Name = "dgvOrganizatori";
             this.dgvOrganizatori.ReadOnly = true;
@@ -76,52 +74,6 @@
             this.dgvOrganizatori.RowTemplate.Height = 28;
             this.dgvOrganizatori.Size = new System.Drawing.Size(889, 312);
             this.dgvOrganizatori.TabIndex = 0;
-            // 
-            // Id
-            // 
-            this.Id.DataPropertyName = "Id";
-            this.Id.HeaderText = "Id";
-            this.Id.MinimumWidth = 8;
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            this.Id.Visible = false;
-            this.Id.Width = 150;
-            // 
-            // Naziv
-            // 
-            this.Naziv.DataPropertyName = "Naziv";
-            this.Naziv.HeaderText = "Naziv";
-            this.Naziv.MinimumWidth = 8;
-            this.Naziv.Name = "Naziv";
-            this.Naziv.ReadOnly = true;
-            this.Naziv.Width = 150;
-            // 
-            // Telefon
-            // 
-            this.Telefon.DataPropertyName = "Telefon";
-            this.Telefon.HeaderText = "Telefon";
-            this.Telefon.MinimumWidth = 8;
-            this.Telefon.Name = "Telefon";
-            this.Telefon.ReadOnly = true;
-            this.Telefon.Width = 150;
-            // 
-            // Email
-            // 
-            this.Email.DataPropertyName = "Email";
-            this.Email.HeaderText = "Email";
-            this.Email.MinimumWidth = 8;
-            this.Email.Name = "Email";
-            this.Email.ReadOnly = true;
-            this.Email.Width = 150;
-            // 
-            // Grad
-            // 
-            this.Grad.DataPropertyName = "Grad";
-            this.Grad.HeaderText = "Grad";
-            this.Grad.MinimumWidth = 8;
-            this.Grad.Name = "Grad";
-            this.Grad.ReadOnly = true;
-            this.Grad.Width = 150;
             // 
             // txtPretraga
             // 
@@ -231,6 +183,43 @@
             this.label1.TabIndex = 25;
             this.label1.Text = "Naziv";
             // 
+            // Id
+            // 
+            this.Id.DataPropertyName = "Id";
+            this.Id.HeaderText = "Id";
+            this.Id.MinimumWidth = 8;
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.Visible = false;
+            this.Id.Width = 150;
+            // 
+            // Naziv
+            // 
+            this.Naziv.DataPropertyName = "Naziv";
+            this.Naziv.HeaderText = "Naziv";
+            this.Naziv.MinimumWidth = 8;
+            this.Naziv.Name = "Naziv";
+            this.Naziv.ReadOnly = true;
+            this.Naziv.Width = 150;
+            // 
+            // Telefon
+            // 
+            this.Telefon.DataPropertyName = "Telefon";
+            this.Telefon.HeaderText = "Telefon";
+            this.Telefon.MinimumWidth = 8;
+            this.Telefon.Name = "Telefon";
+            this.Telefon.ReadOnly = true;
+            this.Telefon.Width = 150;
+            // 
+            // Email
+            // 
+            this.Email.DataPropertyName = "Email";
+            this.Email.HeaderText = "Email";
+            this.Email.MinimumWidth = 8;
+            this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
+            this.Email.Width = 150;
+            // 
             // frmOrganizatori
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -264,15 +253,14 @@
         private System.Windows.Forms.Button btnTrazi;
         private System.Windows.Forms.Button btnIzmijeni;
         private System.Windows.Forms.Button btnIzbrisi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Naziv;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Telefon;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Grad;
         private System.Windows.Forms.Label lblPageNumbers;
         private System.Windows.Forms.Button btnPrevious;
         private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Naziv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Telefon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
     }
 }

@@ -128,7 +128,7 @@ namespace EventiApplication.WebAPI.Service
                         }
 
                       
-                        break;
+                      //  break;
                     }
 
                     if (PostojiEventURazmakuOd10Sati == false)

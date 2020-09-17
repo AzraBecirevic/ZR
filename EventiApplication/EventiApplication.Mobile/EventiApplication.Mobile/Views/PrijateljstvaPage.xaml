@@ -30,7 +30,7 @@
             </Grid>
            
             <Label Text="Prijateljstva" HorizontalTextAlignment="Center" FontAttributes="Bold"></Label>
-            <ListView x:Name="PrijateljstvaList" ItemsSource="{Binding PrijateljstvoList}" HasUnevenRows="True" ItemSelected="PrijateljstvaList_ItemSelected">
+            <ListView x:Name="PrijateljstvaList" ItemsSource="{Binding PrijateljstvoList}" HasUnevenRows="True">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>

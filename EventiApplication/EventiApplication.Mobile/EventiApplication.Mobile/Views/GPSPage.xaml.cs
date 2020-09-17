@@ -39,12 +39,12 @@ namespace EventiApplication.Mobile.Views
 
 
 
-                // radi na androidu, na uwp vraca null za poziciju 
+              
                 /* var locator = CrossGeolocator.Current;
                  locator.DesiredAccuracy = 50;
 
                  var positions = await locator.GetPositionsForAddressAsync("Obala Kulina bana 9, Sarajevo");
-                  var pozicija = positions?.FirstOrDefault();                    // mapKey: "AvEMT9xnkTY8rfXzR7TD1jaClhYUX9qqfSrRORpATDvhkyv9ltiaXw765QFZPX2U"
+                  var pozicija = positions?.FirstOrDefault();                    
                  if (pozicija != null)
                  {
                       AdrLong.Text = pozicija.Longitude.ToString();
@@ -88,7 +88,7 @@ namespace EventiApplication.Mobile.Views
                         }
                     }
                 }
-                if(eventi==null || eventi.Count == 0)
+                if(eventi==null || eventi.Count == 0 || Eventi.Count()==0)
                 {
                     Poruka.Text = "Trenutno nema najavljenih evenata u vasoj blizini";
                     Poruka.IsVisible = true;

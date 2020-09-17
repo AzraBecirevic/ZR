@@ -43,11 +43,7 @@ namespace EventiApplication.Mobile.Views
             Navigation.PushAsync(new DodajPrijateljePage());
         }
 
-        private void PrijateljstvaList_ItemSelected(object sender, SelectedItemChangedEventArgs e)
-        {
-            Navigation.PushAsync(new PrijateljstvoDetaljiPage((e.SelectedItem as PrijateljstvoPrikaz).IdPrijatelja));
-        }
-
+      
         private async void ObrisiPrijateljstvo_Clicked(object sender, EventArgs e)
         {
             ImageButton btn = sender as ImageButton;
