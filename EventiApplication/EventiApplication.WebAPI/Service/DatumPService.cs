@@ -91,7 +91,7 @@ namespace EventiApplication.WebAPI.Service
 
                 if (brojac > 15)  
                 {
-                    Preporuka.Poruka = string.Empty;  // ili "nema preporuke"
+                    Preporuka.Poruka = string.Empty; 
                     Preporuka.PreporuceniDatum = search.IzabraniDatum;
                     break;
                 }
@@ -105,7 +105,7 @@ namespace EventiApplication.WebAPI.Service
                     Preporuka.PreporuceniDatum = search.IzabraniDatum;
 
                     
-                    //treba provjeriti da li ima jos evenata na tom prostoru
+                   
                    var organizovani = _ctx.Event.Where(e => e.ProstorOdrzavanjaId == search.ProstorOdrzavanjaId)
                         .Where(e => e.DatumOdrzavanja.Date.CompareTo(PocetniDatum.Date) == 0).ToList();
 
@@ -128,7 +128,7 @@ namespace EventiApplication.WebAPI.Service
                         }
 
                       
-                      //  break;
+                      
                     }
 
                     if (PostojiEventURazmakuOd10Sati == false)
@@ -136,11 +136,7 @@ namespace EventiApplication.WebAPI.Service
                         Preporuka.IzabranJePreporucen = true;
                            break; 
                     }
-                   /* else
-                    {
-                        Preporuka.Poruka += "postoji event, razmak manji od 10 sati";
-                    }   */
-                    
+                  
                 }
                
                   if(!isPrviProvjeren)
@@ -165,30 +161,7 @@ namespace EventiApplication.WebAPI.Service
                     }
 
 
-                    // ako ima jedan ili vise evenata u razlicito vrijeme na isti datum, prikazati u poruci
-                 /*   var organizovani = _ctx.Event.Where(e => e.ProstorOdrzavanjaId == search.ProstorOdrzavanjaId)
-                   .Where(e => e.DatumOdrzavanja.Date.CompareTo(PocetniDatum.Date) == 0)
-                     /* .Where(e => e.DatumOdrzavanja.TimeOfDay != search.VrijemeEventa).ToList();
-                    bool PostojiEventURazmakuOd10Sati = false;
-                    foreach (var o in organizovani)
-                    {     //Math.abs
-                        if (Math.Abs((o.DatumOdrzavanja - search.IzabraniDatum).TotalHours) < 10)
-                            PostojiEventURazmakuOd10Sati = true;
-
-                    }
-                    if (organizovani.Count != 0 && PostojiEventURazmakuOd10Sati == false)
-                    {
-                        // gdje razmak izedju nijedog org eventa i novog nije manji od 10 h
-                        Preporuka.PreporuceniDatum = PocetniDatum;
-                        Preporuka.Poruka += "Preporuceni datum je " + PocetniDatum.ToShortDateString();
-                        Preporuka.Poruka += "Na ovaj datum na izabranom prostoru postoji/e organizovani event/i u satnici/ama: ";
-                        foreach (var o in organizovani)
-                        {
-                            Preporuka.Poruka += o.VrijemeOdrzavanja + ",";
-                        }
-
-                        break;
-                    }*/
+                 
                 }
 
               }

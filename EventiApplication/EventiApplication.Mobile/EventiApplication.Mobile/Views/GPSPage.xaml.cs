@@ -111,7 +111,7 @@ namespace EventiApplication.Mobile.Views
               var Country = addrs.CountryName;
 
               PunaAdresa.Text = Street + " - " + City + " - " + Country;*/
-            // addrs je null na uwp
+            
         }
 
 
@@ -166,43 +166,5 @@ namespace EventiApplication.Mobile.Views
 
 
 
-/*
- 
-            private async void geocodeButton_Click(object sender, RoutedEventArgs e)
-            //{
-                // The address or business to geocode.
-                string addressToGeocode = "Microsoft";
 
-                // The nearby location to use as a query hint.
-                BasicGeoposition queryHint = new BasicGeoposition();
-                queryHint.Latitude = 47.643;
-                queryHint.Longitude = -122.131;
-                Geopoint hintPoint = new Geopoint(queryHint);
-
-                // Geocode the specified address, using the specified reference point
-                // as a query hint. Return no more than 3 results.
-                 MapLocationFinderResult result =
-                      await MapLocationFinder.FindLocationsAsync(
-                                        addressToGeocode,
-                                        hintPoint,
-                                        3);
-
-                // If the query returns results, display the coordinates
-                // of the first result.
-                if (result.Status == MapLocationFinderStatus.Success)
-                {
-                    string res = "result = (" +
-                          result.Locations[0].Point.Position.Latitude.ToString() + "," +
-                          result.Locations[0].Point.Position.Longitude.ToString() + ")";
-                }
-            //}
-
-            var eventi = await eventiService.Get<List<Model.Event>>(request);
-            Long.Text = eventi.Count.ToString();
-           
-            
-           */
-
-
-//}
 
