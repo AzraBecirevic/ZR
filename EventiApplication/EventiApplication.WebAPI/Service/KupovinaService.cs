@@ -100,7 +100,7 @@ namespace EventiApplication.WebAPI.Service
                 SetujKarte(request.ZeljeniBrKarata, kupovinaTip, prodaja, request.EventId, request.KorisnikId);
                 _ctx.SaveChanges();
 
-              try
+            /*  try
                 {
                     PosaljiMail(request.KorisnikId, CijenaTrenutneKupovine, request.EventId);
                 }
@@ -108,7 +108,7 @@ namespace EventiApplication.WebAPI.Service
                 {
 
                 }
-
+                */
                 CijenaTrenutneKupovine = 0;
 
                 return _mapper.Map<Model.Kupovina>(k); 
@@ -137,7 +137,7 @@ namespace EventiApplication.WebAPI.Service
 
                  SetujKarte(request.ZeljeniBrKarata, kupovinaTip, prodaja, request.EventId, request.KorisnikId);
                  _ctx.SaveChanges();
-
+               /*
                 try
                 {
                     PosaljiMail(request.KorisnikId, CijenaTrenutneKupovine, request.EventId);
@@ -146,7 +146,7 @@ namespace EventiApplication.WebAPI.Service
                 {
 
                 }
-                
+                */
 
                 CijenaTrenutneKupovine = 0;
                 return _mapper.Map<Model.Kupovina>(k); 
@@ -240,7 +240,7 @@ namespace EventiApplication.WebAPI.Service
             {
                 client.Connect("smtp.gmail.com", 587, false);
 
-                client.Authenticate("event.attender@gmail.com", "Event123at");
+                client.Authenticate("event.attender@gmail.com", "");
 
                 client.Send(message);
                 client.Disconnect(true);

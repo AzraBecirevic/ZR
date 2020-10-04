@@ -151,7 +151,7 @@
                 BackgroundColor="#2ac2c5"
                 Command="{Binding SendMessageCommand}"
                 HorizontalOptions="FillAndExpand"
-                Text="Pošalji"
+                Text="-->"
                 VerticalOptions="FillAndExpand" />
         </Grid>
         <Grid

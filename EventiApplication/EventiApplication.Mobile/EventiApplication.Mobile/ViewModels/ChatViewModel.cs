@@ -112,11 +112,16 @@ namespace EventiApplication.Mobile.ViewModels
 
         async Task Connect()
         {
-            await hubConnection.StartAsync();
-            await hubConnection.InvokeAsync("JoinChat", Name);
+            try
+            {
+                await hubConnection.StartAsync();
+                await hubConnection.InvokeAsync("JoinChat", Name);
 
-            IsConnected = true;
+                IsConnected = true;
+            }
+            catch (Exception ex) { }
         }
+    
 
         async Task SendMessage(string user, string message)
         {
