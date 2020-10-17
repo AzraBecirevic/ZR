@@ -119,7 +119,10 @@ namespace EventiApplication.Mobile.ViewModels
 
                 IsConnected = true;
             }
-            catch (Exception ex) { }
+            catch (Exception ex) {
+
+                await Application.Current.MainPage.DisplayAlert("Info", "Trenutno se nije moguće konektovati na chat", "OK");
+            }
         }
     
 
